@@ -1,11 +1,16 @@
-# backend/api/tests.py
+"""Tests for the API application."""
+
 from http import HTTPStatus
 
 from api import models
 from django.test import Client, TestCase
 
+
 class TaskiAPITestCase(TestCase):
+    """Test suite for Task API endpoints."""
+
     def setUp(self):
+        """Prepare test fixtures."""
         self.guest_client = Client()
 
     def test_list_exists(self):
